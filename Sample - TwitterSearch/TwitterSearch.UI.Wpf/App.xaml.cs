@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
 
 namespace TwitterSearch.UI.Wpf
 {

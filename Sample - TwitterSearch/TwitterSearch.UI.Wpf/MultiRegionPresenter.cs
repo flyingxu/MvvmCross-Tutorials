@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Windows;
-using Cirrious.MvvmCross.Wpf.Views;
+using MvvmCross.Wpf.Views;
 
 namespace TwitterSearch.UI.Wpf
 {

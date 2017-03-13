@@ -1,6 +1,6 @@
-﻿using Cirrious.CrossCore;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
+using MvvmCross.Core.ViewModels;
 using TwitterSearch.Core.ViewModels;
 
 namespace TwitterSearch.Core
@@ -30,7 +30,7 @@ namespace TwitterSearch.Core
 
         private void InitialisePlugIns()
         {
-            Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
         }
     }
 }

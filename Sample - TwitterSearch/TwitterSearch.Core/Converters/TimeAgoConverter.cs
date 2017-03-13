@@ -1,5 +1,5 @@
 using System;
-using Cirrious.CrossCore.Converters;
+using MvvmCross.Platform.Converters;
 
 namespace TwitterSearch.Core.Converters
 {

@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Core.ViewModels;
 
 namespace TwitterSearch.Core.ViewModels
 {

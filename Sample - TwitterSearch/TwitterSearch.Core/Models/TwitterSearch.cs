@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Xml.Linq;
-using Cirrious.CrossCore.Core;
+using MvvmCross.Platform.Core;
 
 namespace TwitterSearch.Core.Models
 {

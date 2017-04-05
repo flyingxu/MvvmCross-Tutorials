@@ -1,9 +1,9 @@
-using Cirrious.MvvmCross.Binding.Binders;
-using Cirrious.MvvmCross.Binding.Bindings;
-using Cirrious.MvvmCross.Binding.Bindings.SourceSteps;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using MvvmCross.Binding.Binders;
+using MvvmCross.Binding.Bindings;
+using MvvmCross.Binding.Bindings.SourceSteps;
+using MvvmCross.Binding.iOS.Views;
+using Foundation;
+using UIKit;
 
 namespace CustomerManagement.Touch.Views
 {

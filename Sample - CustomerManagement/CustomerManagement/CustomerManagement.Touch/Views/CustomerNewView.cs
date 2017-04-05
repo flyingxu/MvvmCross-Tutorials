@@ -1,4 +1,4 @@
-using Cirrious.MvvmCross.Views;
+using MvvmCross.Platform.iOS.Views;
 using CustomerManagement.Core.ViewModels;
 
 namespace CustomerManagement.Touch.Views

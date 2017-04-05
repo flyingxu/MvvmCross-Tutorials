@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Models;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
-using Cirrious.MvvmCross.Touch.Views;
+using UIKit;
+using Foundation;
+using MvvmCross.iOS.Views;
 
 namespace CustomerManagement.Touch
 {

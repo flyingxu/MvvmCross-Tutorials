@@ -9,7 +9,7 @@
 	<key>CFBundleVersion</key>
 	<string>0.1</string>
 	<key>MinimumOSVersion</key>
-	<string>4.3</string>
+	<string>9.3</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -35,5 +35,7 @@
 	<string></string>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array/>
+	<key>CFBundleName</key>
+	<string>Customer Management</string>
 </dict>
 </plist>

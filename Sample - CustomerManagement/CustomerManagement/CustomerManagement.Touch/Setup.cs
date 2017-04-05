@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Platform;
-using Cirrious.MvvmCross.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Plugins;
+using MvvmCross.Dialog.iOS;
+using MvvmCross.iOS.Platform;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core;
 using CustomerManagement.Core.Interfaces;
 using CustomerManagement.Core.ViewModels;
@@ -16,7 +15,7 @@ using CustomerManagement.Touch.Views;
 namespace CustomerManagement.Touch
 {
     public class Setup
-        : MvxTouchDialogSetup
+        : MvxIosDialogSetup
     {
         private CustomerManagementPresenter _presenter;
 
@@ -34,11 +33,6 @@ namespace CustomerManagement.Touch
 
 		protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
 		{
-			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.PhoneCall.Touch.Plugin>();
-			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.WebBrowser.Touch.Plugin>();
-			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.File.Touch.Plugin>();
-			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.ResourceLoader.Touch.Plugin>();
-			registry.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.DownloadCache.Touch.Plugin>();
 			base.AddPluginsLoaders(registry);
 		}
 
@@ -47,8 +41,8 @@ namespace CustomerManagement.Touch
 			base.InitializeLastChance ();
 
             Mvx.RegisterSingleton<IViewModelCloser>(_presenter);
-            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
 		}
     }
 }

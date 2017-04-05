@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using Cirrious.MvvmCross.Binding.Touch;
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using Cirrious.MvvmCross.Views;
+using MvvmCross.Binding.iOS;
+using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Platform.iOS.Views;
 using CustomerManagement.Core.Models;
-using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Touch.Views;
+using UIKit;
+using MvvmCross.iOS.Views;
 using CustomerManagement.Core.ViewModels;
-using Cirrious.MvvmCross.Binding.BindingContext;
+using MvvmCross.Binding.BindingContext;
 
 namespace CustomerManagement.Touch.Views
 {

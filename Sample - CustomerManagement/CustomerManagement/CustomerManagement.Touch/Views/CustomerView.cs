@@ -1,9 +1,9 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Views;
-using MonoTouch.UIKit;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Dialog.iOS;
+using MvvmCross.Platform.iOS.Views;
+using UIKit;
 using CustomerManagement.Core.ViewModels;
-using CrossUI.Touch.Dialog.Elements;
+using CrossUI.iOS.Dialog.Elements;
 
 namespace CustomerManagement.Touch.Views
 {

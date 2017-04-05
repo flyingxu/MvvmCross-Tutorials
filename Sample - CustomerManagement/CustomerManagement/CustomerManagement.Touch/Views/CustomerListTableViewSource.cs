@@ -1,6 +1,6 @@
-using Cirrious.MvvmCross.Binding.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using MvvmCross.Binding.iOS.Views;
+using Foundation;
+using UIKit;
 
 namespace CustomerManagement.Touch.Views
 {
@@ -24,7 +24,7 @@ namespace CustomerManagement.Touch.Views
             return cell;
         }
 
-        public override string TitleForHeader(UITableView tableView, int section)
+        public string TitleForHeader(UITableView tableView, int section)
         {
             return string.Empty;
         }

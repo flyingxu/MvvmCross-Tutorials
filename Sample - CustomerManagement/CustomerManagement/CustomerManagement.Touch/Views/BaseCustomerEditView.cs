@@ -1,17 +1,17 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Dialog.Touch;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Views;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Dialog.iOS;
+using MvvmCross.iOS.Views;
+using MvvmCross.Platform.iOS.Views;
 using CustomerManagement.Core.Models;
 using CustomerManagement.Core.ViewModels;
-using MonoTouch.UIKit;
-using CrossUI.Touch.Dialog.Elements;
+using UIKit;
+using CrossUI.iOS.Dialog.Elements;
 
 namespace CustomerManagement.Touch.Views
 {
     public class BaseCustomerEditView <TViewModel>
         : MvxDialogViewController
-        , IMvxModalTouchView
+        , IMvxModalIosView
         where TViewModel : BaseEditCustomerViewModel
     {
 		public new TViewModel ViewModel {

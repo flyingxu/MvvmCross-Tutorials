@@ -1,14 +1,14 @@
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Touch.Views.Presenters;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform.Platform;
+using MvvmCross.iOS.Views;
+using MvvmCross.iOS.Views.Presenters;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Interfaces;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace CustomerManagement.Touch
 {
     public class CustomerManagementPresenter 
-        : MvxTouchViewPresenter
+        : MvxIosViewPresenter
           , IViewModelCloser
     {
         public CustomerManagementPresenter(UIApplicationDelegate applicationDelegate, UIWindow window) 
@@ -20,7 +20,7 @@ namespace CustomerManagement.Touch
         {
             var nav = MasterNavigationController;
             var top = nav.TopViewController;
-            var view = top as IMvxTouchView;
+            var view = top as IMvxIosView;
 
             if (view == null)
             {
@@ -35,7 +35,7 @@ namespace CustomerManagement.Touch
             }
 
             MvxTrace.Trace("request close for {0} - will close current view controller {1}", viewModel.GetType().Name, view.GetType().Name);
-            nav.PopViewControllerAnimated(true);
+            nav.PopViewController(true);
         }
     }
 }

@@ -6,10 +6,12 @@
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F9099EA2-92A9-4431-AA37-782E08422549}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>CustomerManagement.Touch</RootNamespace>
     <AssemblyName>CustomerManagementTouch</AssemblyName>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
@@ -23,6 +25,8 @@
     <MtouchDebug>True</MtouchDebug>
     <ConsolePause>False</ConsolePause>
     <MtouchI18n />
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -32,6 +36,8 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
     <ConsolePause>False</ConsolePause>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>True</DebugSymbols>
@@ -48,6 +54,9 @@
     <NoStdLib>True</NoStdLib>
     <MtouchExtraArgs>-aot "nrgctx-trampolines=4096" -aot "nimt-trampolines=4096" -aot "ntrampolines=4096"</MtouchExtraArgs>
     <MtouchArch>ARMv7</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -59,85 +68,12 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchExtraArgs>-aot "nrgctx-trampolines=4096" -aot "nimt-trampolines=4096" -aot "ntrampolines=4096"</MtouchExtraArgs>
     <MtouchI18n />
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Touch">
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Dialog.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Dialog.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.PhoneCall, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.PhoneCall.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.PhoneCall.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Plugins.PhoneCall.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Plugins.ResourceLoader.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.WebBrowser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.WebBrowser.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.WebBrowser.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Plugins.WebBrowser.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\CrossUI.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Mvx\Touch\CrossUI.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="monotouch">
-    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Windows">
@@ -152,12 +88,82 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>..\..\..\Lib\Mvx\Touch\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.Plugin.Json.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.WebBrowser">
+      <HintPath>..\packages\MvvmCross.Plugin.WebBrowser.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.WebBrowser.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.WebBrowser.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.WebBrowser.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Core">
+      <HintPath>..\packages\MvvmCross.Dialog.iOS.4.4.0\lib\Xamarin.iOS10\CrossUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.iOS">
+      <HintPath>..\packages\MvvmCross.Dialog.iOS.4.4.0\lib\Xamarin.iOS10\CrossUI.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Dialog.iOS">
+      <HintPath>..\packages\MvvmCross.Dialog.iOS.4.4.0\lib\Xamarin.iOS10\MvvmCross.Dialog.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PhoneCall.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.PhoneCall.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.PhoneCall.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.ResourceLoader.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.ResourceLoader.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.ResourceLoader.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Info.plist" />
     <None Include="Images\splash.jpg" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -171,6 +177,12 @@
     <Compile Include="Views\CustomerView.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\CustomerListTableViewSource.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\WebBrowserPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\placeholder_logo.png" />
@@ -185,4 +197,5 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

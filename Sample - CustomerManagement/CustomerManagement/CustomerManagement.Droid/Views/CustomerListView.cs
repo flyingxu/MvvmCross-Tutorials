@@ -7,7 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Views;
 using CustomerManagement.Core.Models;
 using CustomerManagement.Core.ViewModels;
 

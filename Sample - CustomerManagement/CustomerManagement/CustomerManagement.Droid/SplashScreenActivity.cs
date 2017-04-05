@@ -1,7 +1,7 @@
 
 using Android.App;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Droid.Views;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Droid.Views;
 
 namespace CustomerManagement.Droid
 {

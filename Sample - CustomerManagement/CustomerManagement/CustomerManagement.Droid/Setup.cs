@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Android.Content;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Dialog.Droid;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.Binding.Droid;
-using Cirrious.MvvmCross.Plugins.Json;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.MvvmCross.Views;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Binding.Droid;
+using MvvmCross.Plugins.Json;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
 using CustomerManagement.Core;
 using CustomerManagement.Core.Interfaces;
 using CustomerManagement.Core.ViewModels;
@@ -17,7 +16,7 @@ using CustomerManagement.Core.ViewModels;
 namespace CustomerManagement.Droid
 {
     public class Setup 
-        : MvxAndroidDialogSetup
+        : MvxAndroidSetup
     {
         public Setup(Context applicationContext) 
             : base(applicationContext)

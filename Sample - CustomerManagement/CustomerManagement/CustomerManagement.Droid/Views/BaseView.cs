@@ -1,6 +1,6 @@
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Droid.Views;
+using MvvmCross.Binding.Droid.Views;
+using MvvmCross.Core.ViewModels;
 
 namespace CustomerManagement.Droid.Views
 {

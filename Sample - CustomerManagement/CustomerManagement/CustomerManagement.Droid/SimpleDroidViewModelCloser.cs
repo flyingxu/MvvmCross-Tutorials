@@ -1,8 +1,8 @@
-using Cirrious.CrossCore.Droid.Platform;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Droid.Views;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform.Droid.Platform;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Droid.Views;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Interfaces;
 
 namespace CustomerManagement.Droid

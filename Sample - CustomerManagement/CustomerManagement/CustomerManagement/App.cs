@@ -1,5 +1,5 @@
-﻿using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+﻿using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Models;
 using CustomerManagement.Core.ViewModels;
 
@@ -11,8 +11,8 @@ namespace CustomerManagement.Core
     {
         public App()
         {
-            Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            Cirrious.MvvmCross.Plugins.ResourceLoader.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+            MvvmCross.Plugins.ResourceLoader.PluginLoader.Instance.EnsureLoaded();
 
             // set up the model
             var dataStore = new SimpleDataStore();

@@ -4,11 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore;
-using Cirrious.CrossCore.Platform;
-using Cirrious.MvvmCross.Plugins.File;
-using Cirrious.MvvmCross.Plugins.ResourceLoader;
+using MvvmCross.Platform.Exceptions;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Plugins.File;
+using MvvmCross.Plugins.ResourceLoader;
 
 namespace CustomerManagement.Core.Models
 {

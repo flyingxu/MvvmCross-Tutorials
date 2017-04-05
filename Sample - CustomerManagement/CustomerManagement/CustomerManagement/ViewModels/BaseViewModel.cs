@@ -1,5 +1,5 @@
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Interfaces;
 using CustomerManagement.Core.Models;
 using System.Windows.Input;

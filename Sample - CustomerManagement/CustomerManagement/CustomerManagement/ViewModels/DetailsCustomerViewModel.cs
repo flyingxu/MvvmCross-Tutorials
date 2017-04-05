@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.PhoneCall;
-using Cirrious.MvvmCross.Plugins.WebBrowser;
-using Cirrious.MvvmCross.ViewModels;
-using CrossUI.Core.Descriptions;
+using MvvmCross.Platform;
+using MvvmCross.Plugins.PhoneCall;
+using MvvmCross.Plugins.WebBrowser;
+using MvvmCross.Core.ViewModels;
 using CustomerManagement.Core.Models;
 
 namespace CustomerManagement.Core.ViewModels
@@ -70,7 +69,7 @@ namespace CustomerManagement.Core.ViewModels
             {
                 return new MvxCommand(() =>
                                                {
-                                                   Cirrious.MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                                                   MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
                                                    Mvx.Resolve<IMvxWebBrowserTask>().ShowWebPage(Customer.Website);
                                                });
             }
@@ -82,7 +81,7 @@ namespace CustomerManagement.Core.ViewModels
             {
                 return new MvxCommand(() =>
                                                {
-                                                   Cirrious.MvvmCross.Plugins.PhoneCall.PluginLoader.Instance.EnsureLoaded();
+                                                   MvvmCross.Plugins.PhoneCall.PluginLoader.Instance.EnsureLoaded();
                                                    Mvx.Resolve<IMvxPhoneCallTask>().MakePhoneCall(Customer.Name, Customer.PrimaryPhone);
                                                });
             }
@@ -94,7 +93,7 @@ namespace CustomerManagement.Core.ViewModels
             {
                 return new MvxCommand(() =>
                                                {
-                                                   Cirrious.MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                                                   MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
                                                    string googleAddress = string.Format("{0} {1}\n{2}, {3}  {4}",
                                                                                         Customer.PrimaryAddress.
                                                                                             Street1,

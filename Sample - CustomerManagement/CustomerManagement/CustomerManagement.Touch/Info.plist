@@ -37,5 +37,7 @@
 	<array/>
 	<key>CFBundleName</key>
 	<string>Customer Management</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>

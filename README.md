@@ -1,13 +1,10 @@
 MvxTutorials
 ============
 
-To build this repo you need to include the MvvmCross binaries from https://github.com/slodge/MvvmCross-Binaries into /Lib/Mvx
+The upstream of this repo (MvvmCross/MvvmCross-Tutorials) seems to be deleted. Now the upstream is changed to Cheesebaron/MvvmCross-Tutorials which seems to be very outdated. I'll try to update this repo by myself.
 
-![](http://i.imgur.com/4mh5BR7.png)
+In my opinion, it's a mistake to delete MvvmCross/MvvmCross-Tutorials from GitHub, because this repo have many good simple but helpful projects, just like it says, tutorials. I learned MvvmCross and actually native Xamarin.Android and Xamarin.iOS from this kind of repos.
 
-* Use MvvmCross-Binaries\VS2012\bin\[Debug|Release] if you are using Visual Studio and are not targeting Xamarin.iOS/Xamarin.Mac.
-* Use MvvmCross-Binaries\XS-iOS-Mac\bin\[Debug|Release] if you are using MonoDevelop (Xamarin Studio) or are developing for Xamarin.iOS/Xamarin.Mac.
-
-When setup, you should have an Mvx subfolder here with subfolders of 'Portable' plus one or more specific platforms
+PR is welcome if anyone is interested to keep the tutorials up to date with latest version of MvvmCross.
 
 

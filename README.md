@@ -5,6 +5,8 @@ The upstream of this repo (MvvmCross/MvvmCross-Tutorials) seems to be deleted. N
 
 In my opinion, it's a mistake to delete MvvmCross/MvvmCross-Tutorials from GitHub, because this repo have many good simple but helpful projects, just like it says, tutorials. I learned MvvmCross and actually native Xamarin.Android and Xamarin.iOS from this kind of repos.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/flyingxu/MvvmCross-Tutorials/badge)](https://www.codefactor.io/repository/github/flyingxu/MvvmCross-Tutorials)
+
 PR is welcome if anyone is interested to keep the tutorials up to date with latest version of MvvmCross.
 
 
